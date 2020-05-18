@@ -1,0 +1,29 @@
+// Gutters
+
+@mixin gutter {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+@mixin flexy(
+  $dsp: flex,
+  $fwrap: null,
+  $fdir: null,
+  $flex: null,
+  $align-s: null,
+  $j-content: null
+) {
+  display: $dsp;
+  flex-wrap: $fwrap;
+  flex-direction: $fdir;
+  flex: $flex;
+  align-self: $align-s;
+  justify-content: $j-content;
+}
+
+// Layout
+
+@mixin wrap {
+  width: 90%;
+  margin: 0 auto;
+}

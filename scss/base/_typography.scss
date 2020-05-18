@@ -1,0 +1,53 @@
+/* ********************************** BASE ********************************** */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: $bg-color;
+  font: normal 1em/1.5 "Heebo", sans-serif;
+  /* Shorthand: font-weight, font-size, line-height and font-family; */
+}
+
+.wrapper {
+  @include wrap;
+  min-height: calc(100vh - 24px);
+  @media (min-width: $large) {
+    width: 85%;
+    max-width: 1150px;
+  }
+}
+
+header {
+  background: url(../images/bg.jpg);
+  background-size: cover;
+  height: 380px;
+  opacity: 0.8;
+  border-bottom: $border;
+}
+
+/* ********************************* HEADER ********************************* */
+
+.header {
+  @include flexy($fdir: column);
+  align-items: $center;
+  color: $color;
+  text-shadow: 1px 0px 1px #ccc, 0px 1px 1px #eee, 2px 1px 1px #ccc,
+    1px 2px 1px #eee;
+}
+
+.header-title {
+  font-family: "Aclonica", sans-serif;
+  font-size: 3rem;
+  margin-top: 100px;
+}
+
+.header-sub {
+  font-family: "Yeseva One", cursive;
+  font-size: 2rem;
+  text-align: $center;
+}

@@ -1,0 +1,75 @@
+/* ********************************** FORMS ********************************** */
+
+.container-flex {
+  @include flexy($fdir: column);
+  > .items-flex {
+    @include flexy($fdir: column);
+    @media (min-width: $medium) {
+      @include flexy($dsp: null, $fdir: row);
+    }
+  }
+}
+
+.items-flex {
+  > label {
+    font-weight: bolder;
+    font-size: 1.1rem;
+    @media (min-width: $medium) {
+      flex-basis: 25%;
+    }
+  }
+  > input {
+    padding-left: 5px;
+  }
+}
+
+.button-flex {
+  @media (min-width: $medium) {
+    @include flexy($j-content: flex-end);
+  }
+}
+
+input[type="text"],
+input[type="email"] {
+  margin-bottom: 15px;
+}
+
+.items-flex input {
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+  @media (min-width: $medium) {
+    @include flexy($dsp: null, $flex: 1);
+    margin-bottom: 20px;
+  }
+}
+
+fieldset {
+  border: none;
+  > legend {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-shadow: 0px 2px 2px rgba(31, 31, 31, 0.4);
+  }
+}
+
+input[type="submit"] {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: $color-bg;
+  color: $white;
+  font-size: larger;
+  border-radius: 5px;
+  &:hover {
+    background-color: darken($color-bg, 5%);
+  }
+  @media (min-width: $medium) {
+    width: 75%;
+    margin-top: 0;
+    padding: 10px;
+  }
+}

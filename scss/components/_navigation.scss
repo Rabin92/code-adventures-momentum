@@ -1,0 +1,19 @@
+/* ******************************* NAVIGATION ******************************* */
+
+.nav {
+  @include flexy($j-content: $center);
+  @media (min-width: $medium) {
+    @include flexy($dsp: null, $j-content: flex-end);
+  }
+}
+
+.nav-list {
+  margin: 10px 20px 0 0;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  font-weight: bolder;
+  text-shadow: 1px 1px rgba(126, 107, 107, 0.4);
+  &:hover {
+    color: cornsilk;
+  }
+}
