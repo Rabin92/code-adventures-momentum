@@ -25,6 +25,7 @@
   color: $white;
   background-color: $b-color;
   border-radius: 10px 0 10px 0;
+  -webkit-box-shadow: 0 8px 6px -3px $black;
   box-shadow: 0 8px 6px -3px $black;
   margin: 30px 0 30px 0;
 
@@ -36,7 +37,13 @@
 
   @media (min-width: $medium) {
     @include flexy($dsp: null, $align-s: baseline);
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    -webkit-transform: skewX(-4deg) translateX(50px);
+    -ms-transform: skewX(-4deg) translateX(50px);
     transform: skewX(-4deg) translateX(50px);
   }
 }
