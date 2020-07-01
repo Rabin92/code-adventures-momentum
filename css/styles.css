@@ -445,12 +445,6 @@ header {
   color: cornsilk;
 }
 
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
 /* *********************************** ROW ********************************** */
 .row {
   display: flex;
@@ -506,12 +500,6 @@ header {
   }
 }
 
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
 /* ********************************** FORMS ********************************** */
 .container-flex {
   display: flex;
